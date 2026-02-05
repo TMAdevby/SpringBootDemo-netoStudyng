@@ -29,16 +29,17 @@ public class BrokenController {
         throw new IllegalArgumentException("throwException");
     }
 
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<String> iaeHeandler(IllegalArgumentException e){
-        return new ResponseEntity<>("IllegalArgumentException in throwException method", HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<String> reHeandler(RuntimeException e){
-        return new ResponseEntity<>("RuntimeException in throwException method", HttpStatus.I_AM_A_TEAPOT);
-    }
+//    @ResponseStatus(HttpStatus.NOT_FOUND)
+//    @ExceptionHandler(IllegalArgumentException.class)
+//    public ResponseEntity<String> iaeHeandler(IllegalArgumentException e){
+//        return new ResponseEntity<>("IllegalArgumentException in throwException method", HttpStatus.NOT_FOUND);
+//    }
+//
+//    @ExceptionHandler(RuntimeException.class)
+//    public ResponseEntity<String> reHeandler(RuntimeException e){
+//        return new ResponseEntity<>("RuntimeException in throwException method", HttpStatus.I_AM_A_TEAPOT);
+//    }
+    // перенесли все методы в ExceptionHandlerAdvice
 
 }
 
