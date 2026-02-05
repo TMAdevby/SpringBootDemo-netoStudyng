@@ -12,7 +12,7 @@ public class AnotherBrokenController {
 
     @GetMapping("/iae")
     public String throwException() {
-        throw new IllegalArgumentException("throwException");
+        throw new IndexOutOfBoundsException("IndexOutOfBoundsException");
     }
 
 
